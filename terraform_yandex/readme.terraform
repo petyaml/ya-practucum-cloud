@@ -1,0 +1,8 @@
+s9034836@s9034836-01:~/terraform_yandex$ yc config set service-account-key key.json
+s9034836@s9034836-01:~/terraform_yandex$ yc config set service-account-key key.json
+s9034836@s9034836-01:~/terraform_yandex$ yc config set cloud-id b1gn1djs4u2otk6lnqnv
+s9034836@s9034836-01:~/terraform_yandex$ yc config set folder-id b1g9t05l8rlff7hoiqss
+s9034836@s9034836-01:~/terraform_yandex$ export YC_TOKEN=$(yc iam create-token)
+s9034836@s9034836-01:~/terraform_yandex$ export YC_CLOUD_ID=$(yc config get cloud-id)
+s9034836@s9034836-01:~/terraform_yandex$ export YC_FOLDER_ID=$(yc config get folder-id)
+s9034836@s9034836-01:~/terraform_yandex$ terraform plan

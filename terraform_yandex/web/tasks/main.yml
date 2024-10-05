@@ -1,0 +1,23 @@
+---
+# tasks file for web
+- name: Установка Nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: Настройка отдающего Nginx
+  template:
+    src: web_nginx.conf.j2
+    dest: /etc/nginx/sites-available/default
+
+- name: Создание страницы
+  copy:
+    content: "Hello from {{ inventory_hostname }}!"
+    dest: /var/www/html/index.html
+
+- name: Включение и запуск Nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes

@@ -1,0 +1,31 @@
+---
+# tasks file for setup
+- name: Изменение имени машины
+  ansible.builtin.hostname:
+    name: "{{ hostvars[inventory_hostname]['your_variable'] }}"
+- name: Установка программ #Имя задачи
+  apt: #Используемый модуль
+    name: "net-tools" #Параметр имени пакета 
+    state: present #Параметр действия. present - установить, absent - удалить 
+- name: Установка программ #Имя задачи
+  apt: #Используемый модуль
+    name: "dnsutils" #Параметр имени пакета 
+    state: present #Параметр действия. present - установить, absent - удалить 
+- name: Установка программ #Имя задачи
+  apt: #Используемый модуль
+    name: "wget" #Параметр имени пакета 
+    state: present #Параметр действия. present - установить, absent - удалить 
+- name: Установка программ #Имя задачи
+  apt: #Используемый модуль
+    name: "curl" #Параметр имени пакета 
+    state: present #Параметр действия. present - установить, absent - удалить 
+- name: Установка программ #Имя задачи
+  apt: #Используемый модуль
+    name: "mc" #Параметр имени пакета 
+    state: present #Параметр действия. present - установить, absent - удалить 
+- name: Установка программ #Имя задачи
+  apt: #Используемый модуль
+    name: "rsync" #Параметр имени пакета 
+    state: present #Параметр действия. present - установить, absent - удалить 
+
+

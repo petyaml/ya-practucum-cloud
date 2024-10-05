@@ -1,0 +1,17 @@
+- name: Роль установки пакетов
+  hosts: all
+  become: yes
+  roles:
+    - setup
+
+- name: Роль установки прокси
+  hosts: proxy
+  become: yes
+  roles:
+    - proxy
+
+- name: Роль установки веб
+  hosts: web
+  become: yes
+  roles:
+    - web

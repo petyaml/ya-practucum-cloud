@@ -1,0 +1,33 @@
+all:
+  hosts:
+    vm-1:
+      ansible_host: 89.169.153.110
+      your_variable: "web"
+    vm-2:
+      ansible_host: 89.169.129.37
+      your_variable: "proxy"
+    vm-3:
+      ansible_host: 89.169.140.98
+      your_variable: "serv"
+  vars:
+    ansible_user: yap
+    ansible_ssh_private_key_file: ~/.ssh/id_ed25519
+    ansible_python_interpreter: /usr/bin/python3
+web:
+  hosts:
+    vm-1:
+      ansible_host: 89.169.153.110
+      your_variable: "web"
+  vars:
+    ansible_user: yap
+    ansible_ssh_private_key_file: ~/.ssh/id_ed25519
+    ansible_python_interpreter: /usr/bin/python3
+proxy:
+  hosts:
+    vm-2:
+      ansible_host: 89.169.129.37
+      your_variable: "proxy"
+  vars:
+    ansible_user: yap
+    ansible_ssh_private_key_file: ~/.ssh/id_ed25519
+    ansible_python_interpreter: /usr/bin/python3
