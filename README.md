@@ -1,3 +1,1 @@
-# ya-practucum-cloud
-# ya-practucum-cloud
-# ya-practucum-cloud
+репозиторий для курса «Системный администратор» от Яндекс Практикума.
