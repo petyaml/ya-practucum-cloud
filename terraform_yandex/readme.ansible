@@ -1,0 +1,2 @@
+После разоваричивания ВМ Terraform для Ansible изменить IP в файле inventory.yaml
+а так же IP адреес для прокси в файле /proxy/templates/proxy_nginx.conf.j2
